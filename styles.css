@@ -15,6 +15,10 @@ nav{
 }
 a {
     color: white !important;
+    font-weight: lighter !important;
+}
+.nav-link {
+    font-weight: lighter;
 }
 h1,h2,h3,h4,h5,h6{
 font-weight:normal;
@@ -84,6 +88,9 @@ input {
     color: white; /* Adjust the input text color as needed */
     transition: border-color 0.3s;
   }
+  label{
+    font-size: 16px;
+  }
 
   .input-container{
     font-size: 18px;
@@ -98,5 +105,22 @@ input,textarea:focus{
 }
 
 .input-container input.error, .input-container textarea.error {
-    border-color: red;
+    border:2px solid red;
+}
+footer{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+button:hover{
+    background-color: white !important;
+    color: black !important;
+}
+button:focus{
+    outline: none !important;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        justify-content: flex-end !important;
+        display: flex;
+    }
 }
