@@ -16,6 +16,9 @@ nav{
 a {
     color: white !important;
 }
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+}
 .section-1{
     background-image: url("images/84770f_ff1e47135ac74cf4a604c7add4cfe4cd~mv2.webp");
     background-repeat: no-repeat;
@@ -24,4 +27,76 @@ a {
 .section-2{
     margin-top: 5rem;
     margin-bottom: 3rem;
+}
+.section-3{
+    background-image: url("images/section-3-bg-image.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+}
+.section-3 .row{
+      color: rgb(255, 255, 255);
+}
+.icon{
+    font-size:1.4em;
+}
+.section-4{
+    padding-block: 5rem;
+    color: rgb(0, 0, 0);
+}
+.section-4 p{
+    font-weight: lighter;
+    max-width: 230px;
+}
+.section-5{
+    background-image: url("images/section-5-bg-img.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+.section-6{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.card-main{
+        border-radius: 25px;
+        padding: 25px;
+        padding-top: 50px;
+        width: 200px;
+        box-shadow: 0px 0px 40px 40px #f8f8f8;
+        min-height: 370px;
+      
+}
+.section-7{
+    background-image: url("images/section-7-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+input {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    padding: 5px;
+    color: white; /* Adjust the input text color as needed */
+    transition: border-color 0.3s;
+  }
+
+  .input-container{
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+  }
+  .input-container .row{
+    margin-top: 2.2rem;
+  }
+input,textarea:focus{
+    outline: none;
+}
+
+.input-container input.error, .input-container textarea.error {
+    border-color: red;
 }
