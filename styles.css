@@ -170,6 +170,7 @@ button:focus{
     }
     .section-2{
         padding-top: 3rem !important;
+        min-height: 50vh !important;
     }
     .p-w{
         font-size: 30px;
