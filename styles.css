@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Jost', sans-serif;
@@ -27,10 +28,15 @@ font-weight:normal;
     background-image: url("images/84770f_ff1e47135ac74cf4a604c7add4cfe4cd~mv2.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top:12rem; 
+    padding-bottom:6rem;
+    min-height:80vh;
 }
 .section-2{
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    
+    
 }
 .section-3{
     background-image: url("images/section-3-bg-image.webp");
@@ -48,6 +54,8 @@ font-weight:normal;
 .section-4{
     padding-block: 5rem;
     color: rgb(0, 0, 0);
+    width:80%;
+     margin-inline:auto; 
 }
 .section-4 p{
     font-weight: lighter;
@@ -118,9 +126,137 @@ button:hover{
 button:focus{
     outline: none !important;
 }
+@media (max-width:991px) {
+    .section-1{
+
+        padding-top:2rem; 
+        padding-bottom:5rem;
+    }
+    .section-1 .responsive{
+        font-size:35px;
+        line-height:1em;
+    }
+    .respo-imgs{
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin-bottom:2rem;
+    }
+    .respo-imgs img{
+        
+        height:30px;
+        width: 90px;
+    }
+    .sm-img-center{
+        display: flex;
+        justify-content: center;
+    }
+    .section-2 .container .row .col-md-6 h2{
+        font-size: 35px !important;
+        margin-bottom: 1rem;
+    }
+    .section-3 .container{
+        width: 100% !important;
+    }
+    .section-3 .container h2{
+        margin-bottom: 6rem !important;
+        font-size: 35px !important;
+    }
+    .section-3 .container .row .col-md-3{
+        margin-bottom: 3rem;
+    }
+    .section-3 .container .row .col-md-3 i{
+          margin-bottom:1rem !important;
+    }
+    .section-3 .container .row .col-md-3 p{
+        margin-top:1.5rem !important;
+  }
+  .section-4{
+    padding-block: 2rem !important;
+    width:100%;
+    
+}
+.section-4 .container .row .col-md-5{
+    margin-top: 1rem !important;
+}
+.section-4 .container .row .col-md-5 h2{
+    font-size:35px !important;
+    text-align: center;
+    margin-bottom: 2rem !important;
+}
+.section-4 .container .row .col-md-5 p{
+    margin-bottom: 0.75rem !important;
+}
+.section-4 .container .row .col-md-3 img{
+    display: flex;
+    justify-content: center;
+}
+.respon-text-img{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.text-left{
+    text-align: left !important;
+}
+.story-space{
+    margin-bottom: 0.75rem !important;
+}
+.section-5 .container{
+    width: 100% !important;
+}
+.section-5 .container h2{
+    font-size: 35px !important;
+    margin-bottom: 3rem;
+}
+.para-size {
+    font-size: 25px !important;
+    margin-bottom: 1rem !important;
+}
+.section-6 .container {
+    width: 100% !important;
+}
+.section-6 .container h2{
+    font-size: 35px !important;
+    text-align: center;
+    margin-bottom: 2rem !important;
+}
+.section-6{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.section-6 .container .row .col-md-4{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 2rem;
+}
+.section-7 .container{
+    width: 100% !important;
+}
+.section-7{
+
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+.section-7 .container .row .col-md-5 p{
+    font-size: 35px !important;
+}
+footer .container-fluid{
+    width: 100% !important;
+}
+.footer-img img{
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.footer-left-part{
+    flex-direction: column;
+    align-items:center !important;
+    justify-content: center !important;
+}
+
+
+}
 @media (min-width: 768px) {
     .navbar-nav {
         justify-content: flex-end !important;
-        display: flex;
+        gap: 8px !important;
     }
 }
