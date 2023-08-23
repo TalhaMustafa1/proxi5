@@ -20,6 +20,10 @@ a {
 }
 .nav-link {
     font-weight: lighter;
+
+}
+.nav-link:hover{
+    color: #8ca9b4!important;
 }
 h1,h2,h3,h4,h5,h6{
 font-weight:normal;
@@ -29,14 +33,14 @@ font-weight:normal;
     background-image: url("images/84770f_ff1e47135ac74cf4a604c7add4cfe4cd~mv2.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top:12rem; 
+    padding-top:10rem; 
     padding-bottom:6rem;
     min-height:80vh;
     scroll-margin-top:1em;
 }
 .section-2{
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 9rem;
+    padding-bottom: 6rem;
     min-height:90vh !important;
     scroll-margin-top: 4em;
 }
@@ -302,10 +306,10 @@ footer .container-fluid{
     transform: translateX(0px) !important; /* Start the image off-screen to the left */
 }
 .fixed-button {
-    position:relative !important; /* Use relative positioning */
+    position:absolute !important; /* Use relative positioning */
      /* Center horizontally */
     bottom: unset;
-    right: 0 !important;
+    right: 30px !important;
     width: 100%; /* Take full width */
     justify-content: center ;
     
@@ -378,12 +382,10 @@ footer .container-fluid{
 }
 .section-privacypolicy p{
     font-size: 16px;
-    font-weight: lighter;
+    font-weight: 300;
     margin-bottom: 2rem;
 }
-button:focus, button:active{
-    outline: none;
-}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Your styles here */
     /* For example, adjusting margins */
