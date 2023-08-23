@@ -31,11 +31,13 @@ font-weight:normal;
     padding-top:12rem; 
     padding-bottom:6rem;
     min-height:80vh;
+    scroll-margin-top:1em;
 }
 .section-2{
-    padding-top: 10rem;
+    padding-top: 7rem;
     padding-bottom: 7rem;
-    min-height:80vh !important;
+    min-height:90vh !important;
+    scroll-margin-top: 4em;
 }
 .section-3{
     background-image: url("images/section-3-bg-image.webp");
@@ -43,6 +45,7 @@ font-weight:normal;
     background-size: cover;
     padding-top: 6rem;
     padding-bottom: 8rem;
+    scroll-margin-top: 4em;
 }
 .section-3 .row{
       color: rgb(255, 255, 255);
@@ -55,6 +58,7 @@ font-weight:normal;
     color: rgb(0, 0, 0);
     width:80%;
      margin-inline:auto; 
+     scroll-margin-top: 4em;
 }
 .section-4 p{
     font-weight: lighter;
@@ -66,10 +70,13 @@ font-weight:normal;
     background-size: cover;
     padding-top: 6rem;
     padding-bottom: 5rem;
+    min-height: 90vh;
+    scroll-margin-top: 5em;
 }
 .section-6{
     padding-top: 5rem;
     padding-bottom: 5rem;
+    scroll-margin-top: 4em;
 }
 .card-main{
         border-radius: 25px;
@@ -86,7 +93,9 @@ font-weight:normal;
     background-size: cover;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    height:80vh  !important;
+    min-height:90vh  !important;
+    scroll-margin-top:4em;
+    
 }
 input {
     border: none;
@@ -242,16 +251,32 @@ button:focus{
 footer .container-fluid{
     width: 100% !important;
 }
-.footer-img img{
-    flex-direction: column !important;
-    align-items: center !important;
-}
-.footer-left-part{
-    flex-direction: column;
-    align-items:center !important;
-    justify-content: center !important;
-}
 
+.footer-left-part{
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+.footer-img{
+    flex-direction: row!important;
+    align-items: self-start !important;
+    justify-content: flex-start !important;
+}
+.move-from-left.active {
+    transform: translateX(0px) !important; /* Move the image to its original position */
+}
+.move-from-left {
+    transition: transform 3s ease !important; /* Define the transition property */
+    transform: translateX(0px) !important; /* Start the image off-screen to the left */
+}
+.fixed-button {
+    position: relative !important; /* Use relative positioning */
+     /* Center horizontally */
+    bottom: unset;
+    right: 0 !important;
+    width: 100%; /* Take full width */
+    justify-content: center ;
+}
 
 }
 @media (min-width: 768px) {
@@ -260,3 +285,54 @@ footer .container-fluid{
         gap: 8px !important;
     }
 }
+.text-animation {
+    opacity: 0; /* Initially set to fully transparent */
+    transform: translateY(0px); /* Initially move the text down slightly */
+    animation: fadeInUp 3s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* At the end of the animation, make the text fully opaque */
+        transform: translateY(0); /* Bring the text back to its original position */
+    }
+}
+.reveal{
+  position: relative;
+  transform: translateY(0px);
+  opacity: 0;
+  transition: 3s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Add this to your existing CSS or in a <style> block */
+.move-from-left {
+    transition: transform 3s ease; /* Define the transition property */
+    transform: translateX(0); /* Start the image off-screen to the left */
+}
+
+.move-from-left.active {
+    transform: translateX(-50px); /* Move the image to its original position */
+}
+
+.fixed-button {
+    background-color: #3a8088;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    margin-top: 12px; /* Adjust the z-index to make sure it's above other elements */
+}
+.navbar-toggler:focus{
+    border:2px red !important;
+}
+
