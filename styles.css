@@ -16,10 +16,10 @@ nav{
 }
 a {
     color: white !important;
-    font-weight: lighter !important;
+    font-weight: 300 !important;
 }
 .nav-link {
-    font-weight: lighter;
+    font-weight: 300;
 
 }
 .nav-link:hover{
@@ -39,9 +39,9 @@ font-weight:normal;
     scroll-margin-top:1em;
 }
 .section-2{
-    padding-top: 9rem;
+    padding-top: 8rem;
     padding-bottom: 6rem;
-    min-height:90vh !important;
+    min-height:80vh !important;
     scroll-margin-top: 4em;
 }
 .section-3{
@@ -66,7 +66,7 @@ font-weight:normal;
      scroll-margin-top: 4em;
 }
 .section-4 p{
-    font-weight: lighter;
+    font-weight: 300;
     max-width: 230px;
 }
 .section-5{
@@ -116,7 +116,7 @@ input {
 
   .input-container{
     font-size: 18px;
-    font-weight: lighter;
+    font-weight: 300;
     color: white;
   }
   .input-container .row{
@@ -170,7 +170,8 @@ button:focus{
     }
     .section-2{
         padding-top: 3rem !important;
-        min-height: 50vh !important;
+        padding-bottom: 3rem;
+        min-height: 40vh !important;
     }
     .p-w{
         font-size: 30px;
@@ -207,7 +208,7 @@ button:focus{
 }
 
 .section-4 p{
-    font-weight: lighter;
+    font-weight: 300;
     min-width:100% !important;
 }
 .section-4 .container .row .col-lg-5{
