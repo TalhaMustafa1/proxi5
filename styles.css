@@ -173,6 +173,10 @@ button:focus{
         padding-bottom: 3rem;
         min-height: 40vh !important;
     }
+    .small-image{
+        width:280px ;
+        height: 567px;
+    }
     .p-w{
         font-size: 30px;
         min-width: 100%;
@@ -421,4 +425,8 @@ footer .container-fluid{
         width: 280px !important;
     }
     
+}
+.transition-effect:hover{
+    transform: scale(1.1);
+
 }
