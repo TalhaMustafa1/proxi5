@@ -518,4 +518,17 @@ color: white;
  .first-box,.second-box,.third-box,.fourth-box,.fifth-box{
     width: 80%;
  }
+ .third-box h3{
+    font-size: 18px;
+ }
+ .ad-box {
+    background-image: url('https://smartyads.com/storage/uploads/2020/september/in-app-advertising-trends.png');
+    /* Add other background properties as needed */
+    background-size: contain; /* Adjust based on your design needs */
+    background-position: center; /* Adjust based on your design needs */
+    /* Add any other styles for the .ad-box class */
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat; /* Adjust based on your design needs */
+}
 }
