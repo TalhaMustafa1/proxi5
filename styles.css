@@ -140,6 +140,7 @@ button:hover{
 button:focus{
     outline: none !important;
 }
+
 @media (max-width:991px) {
     .section-1{
 
@@ -429,4 +430,93 @@ footer .container-fluid{
 .transition-effect:hover{
     transform: scale(1.1);
 
+}
+.box-main{
+    margin-top: 5%;
+    width:100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 70vh;
+}
+.first-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    box-shadow: 5px 5px 15px #999;
+    border-radius: 25px;
+    padding-inline: 20px;
+    padding-block:20px;
+}
+.start-now-btn{
+border-radius: 25px;
+padding-inline: 10px;
+padding-block: 8px;
+background-color: #161635;
+color: white;
+}
+.second-box{
+    width: 40%;
+    box-shadow: 5px 5px 15px #999;
+    border-radius: 25px;
+    padding-inline: 20px;
+    padding-block:20px;
+    display: none;
+}
+.box-input{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    margin-top: 15px;
+    
+}
+.box-input input{
+    border: 2px solid #999;
+    color: black;
+}
+.box-input label{
+    font-weight: 500;
+}
+.third-box{
+    width: 40%;
+    box-shadow: 5px 5px 15px #999;
+    border-radius: 25px;
+    padding-inline: 20px;
+    padding-block:20px;
+    display: none;
+}
+.ad-box {
+    background-image: url('https://smartyads.com/storage/uploads/2020/september/in-app-advertising-trends.png');
+    /* Add other background properties as needed */
+    background-size: contain; /* Adjust based on your design needs */
+    background-position: center; /* Adjust based on your design needs */
+    /* Add any other styles for the .ad-box class */
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat; /* Adjust based on your design needs */
+}
+
+.fourth-box{
+    width: 40%;
+    box-shadow: 5px 5px 15px #999;
+    border-radius: 25px;
+    padding-inline: 20px;
+    padding-block:20px;
+    display: none;   
+}
+.fifth-box{
+    width: 40%;
+    box-shadow: 5px 5px 15px #999;
+    border-radius: 25px;
+    padding-inline: 20px;
+    padding-block:20px;
+    display: none;
+    
+}
+@media (max-width:991px) {
+ .first-box,.second-box,.third-box,.fourth-box,.fifth-box{
+    width: 80%;
+ }
 }
