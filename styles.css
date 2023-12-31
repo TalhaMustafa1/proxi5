@@ -514,6 +514,12 @@ color: white;
     display: none;
     
 }
+.next-prev-btn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
 @media (max-width:991px) {
  .first-box,.second-box,.third-box,.fourth-box,.fifth-box{
     width: 80%;
