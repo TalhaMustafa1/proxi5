@@ -104,6 +104,7 @@
                     <div class="second-box">
                         <h3 class="text-center">Please fill out the information</h3>
                         <div>
+                            <form action="" id="myForm">
                             <div class="box-input">
                                 <label for="businessName">Business Name:</label>
                                 <input type="text" id="businessName" name="businessName"
@@ -111,7 +112,13 @@
                             </div>
                             <div class="box-input">
                                 <label for="businessName">Upload Image</label>
-                                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required>
+                                
+                                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required onchange="previewImage()">
+                            </div>
+                            <div class="box-input">
+                                <label for="link">Link (Optional)</label>
+                                <input type="text" id="link" name="link" placeholder="Link" >
+                                
                             </div>
                             <div class="box-input">
                                 <label for="caption">Caption:</label>
@@ -122,6 +129,7 @@
                                 <input type="email" id="emailAddress" name="emailAddress"
                                     placeholder="Enter your email address" required>
                             </div>
+                            
                         </div>
                         <br>
                         <div class="next-prev-btn">
@@ -129,18 +137,24 @@
                                 <h6 id="second-box-prev" style="cursor: pointer;"> &larr; Previous</h6>
                             </div>
                             <div style="">
-                                <h6 style=" cursor: pointer; " id="second-box-next">Next &rarr;</h6>
+                                <button style=" cursor: pointer; " id="second-box-next" type="submit">Next &rarr;</button>
+                            
                             </div>
                         </div>
 
-
+                    </form>
                     </div>
                     <div class="third-box">
-                        <h3 class="text-center" style="margin-bottom: 15px;">Preview of how the add will be displayed
+                        <h3 class="text-center" style="margin-bottom: 15px;">Preview of  the add will be displayed
                         </h3>
-                        <div class="ad-box">
-
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                        <div class="ad-boxx" id="imagePreview">
+                            
+                                <!-- Placeholder image with fixed dimensions -->
+                                <img src="placeholder.jpg" alt="Placeholder" >
+                            
                         </div>
+                    </div>
                         <br>
                         <div class="next-prev-btn">
                             <div>
@@ -154,6 +168,7 @@
                     <div class="fourth-box">
                         <h3 class="text-center">Please Complete Checkout</h3>
                         <h5>Credit card details </h5>
+                        <form action="" id="mySecondForm">
                         <div class="box-input">
                             <label for="bankName">Bank Name:</label>
                             <input type="text" id="bankName" name="bankName" placeholder="Enter your bank name"
@@ -177,9 +192,10 @@
                                 <h6 id="fourth-box-prev" style="cursor: pointer;"> &larr; Previous</h6>
                             </div>
                             <div style="">
-                                <button class="start-now-btn" id="fourth-box-next">Checkout</button>
+                                <button class="start-now-btn" id="fourth-box-next" type="submit">Checkout</button>
                             </div>
                         </div>
+                    </form>
                     </div>
                     <div class="fifth-box">
                         <h3 class="text-center">A confiramation email has been sent</h3>
@@ -298,24 +314,60 @@
             document.querySelector('.second-box').style.display = 'block';
         });
     </script>
-    <script>
-        document.getElementById('second-box-next').addEventListener('click', function () {
+<script>
+    document.getElementById('second-box-prev').addEventListener('click', function () {
+        // Handle the logic for going back to the previous step
+    });
+
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Check if the form is valid
+        if (validateForm()) {
+            // Proceed to the next step
             document.querySelector('.second-box').style.display = 'none';
             document.querySelector('.third-box').style.display = 'block';
-        });
-    </script>
+        } else {
+            alert("Please fill out all required fields.");
+        }
+    });
+
+    function validateForm() {
+        // You can add custom validation logic here if needed
+        return document.getElementById("myForm").checkValidity();
+    }
+</script>
     <script>
         document.getElementById('third-box-next').addEventListener('click', function () {
             document.querySelector('.third-box').style.display = 'none';
             document.querySelector('.fourth-box').style.display = 'block';
         });
     </script>
-    <script>
-        document.getElementById('fourth-box-next').addEventListener('click', function () {
+<script>
+    document.getElementById('fourth-box-prev').addEventListener('click', function () {
+        // Handle the logic for going back to the previous step
+    });
+
+    document.getElementById('mySecondForm').addEventListener('submit', function (event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Check if the form is valid
+        if (validateSecondForm()) {
+            // Proceed to the next step
             document.querySelector('.fourth-box').style.display = 'none';
             document.querySelector('.fifth-box').style.display = 'block';
-        });
-    </script>
+        } else {
+            alert("Please fill out all required fields.");
+        }
+    });
+
+    function validateSecondForm() {
+        // You can add custom validation logic here if needed
+        return document.getElementById("mySecondForm").checkValidity();
+    }
+</script>
     <script>
         document.getElementById('second-box-prev').addEventListener('click', function () {
             document.querySelector('.second-box').style.display = 'none';
@@ -334,7 +386,24 @@
             document.querySelector('.third-box').style.display = 'block';
         });
     </script>
+<script>
+    function previewImage() {
+        var fileInput = document.getElementById('imageUpload');
+        var imagePreview = document.getElementById('imagePreview');
 
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                imagePreview.innerHTML = '<img src="' + e.target.result + '" alt="Image Preview">';
+            };
+
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+
+    // Add the rest of your script logic for transitioning between steps
+</script>
 </body>
 
 </html>

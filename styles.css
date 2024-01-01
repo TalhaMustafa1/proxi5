@@ -7,6 +7,7 @@
 }
 body{
     font-family: 'Jost', sans-serif !important;
+    overflow-x: hidden;
 }
 nav{
     background-color: #161635;
@@ -432,12 +433,12 @@ footer .container-fluid{
 
 }
 .box-main{
-    margin-top: 5%;
+    margin-top: 10%;
     width:100% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    height: 70vh;
+    height: 90vh;
 }
 .first-box{
     display: flex;
@@ -520,6 +521,23 @@ color: white;
     flex-direction: row;
     align-items: center;
 }
+.second-box button{
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 18px;
+}
+
+.ad-boxx {
+    width: 500px;
+    height: 300px;
+}
+#imagePreview img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
 @media (max-width:991px) {
  .first-box,.second-box,.third-box,.fourth-box,.fifth-box{
     width: 80%;
@@ -537,4 +555,16 @@ color: white;
     height: 200px;
     background-repeat: no-repeat; /* Adjust based on your design needs */
 }
+.ad-boxx {
+    width:280px;
+    height: 190px;
+
+}
+}
+@media (max-width:320px) {
+    .ad-boxx {
+        width:220px;
+        height: 180px;
+    
+    }
 }
